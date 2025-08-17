@@ -53,7 +53,6 @@ exports.getUserById = async (req, res) => {
     }
 }
 
-
 exports.updateUser = async (req, res) => {
     try {
         const user = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -66,7 +65,6 @@ exports.updateUser = async (req, res) => {
         res.status(500).json({ message: "Server Error" });
     }
 }
-
 
 exports.deleteUser = async (req, res) => {
     try {

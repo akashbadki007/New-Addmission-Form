@@ -9,6 +9,8 @@ app.use(express.urlencoded({ extended: true }));
 const db = require("./config/dbConnect");
 db();
 
+const loginRoutes = require("./routes/loginRoutes")
+app.use('/api/v1/', loginRoutes);
 const userRoutes = require('./routes/userRoutes');
 app.use('/api/v1/', userRoutes);
 
